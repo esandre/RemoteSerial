@@ -7,13 +7,15 @@ namespace serial2http.Test
     [TestClass]
     public class SerialPortBuilderTest
     {
+        private const string ValidListenerUri = "http://localhost:60500/";
+
         [TestMethod]
         public void Invalid_Port_Name_Throws_PortNameException()
         {
             const string portName = "badPort";
             var expectedMessage = new PortNameException(portName).Message;
 
-            Check.ThatCode(() => Program.Main(new []{ portName }))
+            Check.ThatCode(() => Program.Main(new []{ portName, ValidListenerUri }))
                 .Throws<PortNameException>()
                 .WithMessage(expectedMessage);
         }
