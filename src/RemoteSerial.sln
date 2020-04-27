@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "serial2http", "serial2http\serial2http.csproj", "{66BB8621-2C8B-4E5C-92F6-CA47665A0D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serial2http.Test", "serial2http.Test\serial2http.Test.csproj", "{A144550E-6B30-4274-888D-6BDADED24C46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66BB8621-2C8B-4E5C-92F6-CA47665A0D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BB8621-2C8B-4E5C-92F6-CA47665A0D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BB8621-2C8B-4E5C-92F6-CA47665A0D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BB8621-2C8B-4E5C-92F6-CA47665A0D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A144550E-6B30-4274-888D-6BDADED24C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A144550E-6B30-4274-888D-6BDADED24C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A144550E-6B30-4274-888D-6BDADED24C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A144550E-6B30-4274-888D-6BDADED24C46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F36284C-67BA-4ACA-B6C5-B94AA9D41CCA}
+	EndGlobalSection
+EndGlobal
