@@ -1,5 +1,6 @@
 ﻿using System.IO.Ports;
 using System.Linq;
+using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 using serial2http.Exceptions;
@@ -30,6 +31,19 @@ namespace serial2http.Test
             Check.ThatCode(() => Program.Main(new[] { ValidSerialPortName, badUri }))
                 .Throws<MalformedUriException>()
                 .WithMessage(expectedMessage);
+        }
+
+        [TestMethod]
+        public void Not_Listenable_Uri_Throws_CannotListenOnUriException()
+        {
+            const string testedUri = "http://localhost:60530/";
+            using var listenerOccupingThePort = new HttpListener { Prefixes = { testedUri }};
+            listenerOccupingThePort.Start();
+
+            Check.ThatCode(() => Program.Main(new[] {ValidSerialPortName, testedUri}))
+                .Throws<CannotListenOnUriException>();
+
+            listenerOccupingThePort.Stop();
         }
     }
 }

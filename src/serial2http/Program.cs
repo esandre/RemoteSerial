@@ -30,6 +30,9 @@ namespace serial2http
             var portName = args.First();
             var builder = new SerialPortBuilder(portName);
             builder.Build();
+
+            var listener = new HttpListenerBuilder(listenedUri);
+            listener.Build();
         }
     }
 }
